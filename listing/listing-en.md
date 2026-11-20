@@ -30,7 +30,7 @@ Use the key you already have: Claude (Anthropic), GPT (OpenAI), Gemini (Google),
 • The extension asks for access to a translation provider's server only when you select it.
 
 ★ GOOD TO KNOW
-• Interface language of the extension: Russian.
+• Interface language of the extension: English (default) or Russian — switch in the popup under “Interface language”.
 • You need an API key from an AI provider (usually a few cents per thousand messages) unless you use the free Google engine.
 • WhatsApp Web changes from time to time; if something stops working, enable "Diagnostics" in the popup and copy the report — it contains no message text.
 

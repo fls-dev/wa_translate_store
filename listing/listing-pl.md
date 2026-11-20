@@ -30,7 +30,7 @@ Użyj klucza, który już masz: Claude (Anthropic), GPT (OpenAI), Gemini (Google
 • Dostęp do serwera dostawcy tłumaczeń jest wymagany dopiero po jego wybraniu.
 
 ★ WARTO WIEDZIEĆ
-• Język interfejsu rozszerzenia: rosyjski.
+• Język interfejsu rozszerzenia: angielski (domyślnie) lub rosyjski — przełączany w oknie rozszerzenia („Interface language”).
 • Potrzebny jest klucz API dostawcy AI (zwykle grosze za tysiąc wiadomości), chyba że używasz darmowego silnika Google.
 • WhatsApp Web zmienia się co jakiś czas; jeśli coś przestanie działać, włącz „Diagnostykę” w oknie rozszerzenia i skopiuj raport – nie zawiera on treści wiadomości.
 

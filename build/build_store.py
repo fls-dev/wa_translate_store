@@ -4,7 +4,7 @@ import json, os, re, shutil, sys, zipfile
 SRC='/workspace/wa_translate'; OUT='/workspace/wa_translate_store/extension'
 man=json.load(open(SRC+'/manifest.json')); ver=man['version']
 stage=f'/tmp/wa_store_stage'; shutil.rmtree(stage,ignore_errors=True); os.makedirs(stage+'/icons')
-FILES=['manifest.json','background.js','translate.js','content.js','content.css','popup.html','popup.css','popup.js']
+FILES=['manifest.json','background.js','i18n.js','translate.js','content.js','content.css','popup.html','popup.css','popup.js']
 for f in FILES: shutil.copy(f'{SRC}/{f}',f'{stage}/{f}')
 for n in ('icon16','icon32','icon48','icon128'): shutil.copy(f'{SRC}/icons/{n}.png',f'{stage}/icons/{n}.png')
 # убрать тестовые хуки (строки с маркером @test-only)
