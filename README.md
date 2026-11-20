@@ -6,7 +6,7 @@
 <p align="center"><b>AI translator for WhatsApp Web</b> — read every chat in your language and reply in theirs, with <i>meaning</i>, not word by word.</p>
 
 <p align="center">
-  <img alt="Version" src="https://img.shields.io/badge/version-3.2.1-1fd16b?style=flat-square">
+  <img alt="Version" src="https://img.shields.io/badge/version-3.2.1-1fd16b?style=flat-square"> <img alt="License: MIT" src="https://img.shields.io/badge/license-MIT-green">
   <img alt="Manifest V3" src="https://img.shields.io/badge/Chrome-Manifest%20V3-4285F4?style=flat-square&logo=googlechrome&logoColor=white">
   <img alt="No tracking" src="https://img.shields.io/badge/tracking-none-0e9f7e?style=flat-square">
   <img alt="Bring your own key" src="https://img.shields.io/badge/AI-bring%20your%20own%20key-8a6cff?style=flat-square">
@@ -135,3 +135,7 @@ No. See the disclaimer below. The extension only reads the page you have open an
 ## Disclaimer
 
 WA Translate is an independent project. It is **not affiliated with, endorsed by, or sponsored by WhatsApp LLC or Meta Platforms, Inc.** "WhatsApp" is a trademark of its respective owner and is used here only to describe compatibility.
+
+## License
+
+[MIT](LICENSE) © 2026 fls-dev
