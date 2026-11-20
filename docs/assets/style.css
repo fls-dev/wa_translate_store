@@ -23,7 +23,6 @@ body{margin:0;background:var(--bg);color:var(--text);
   letter-spacing:-.006em;-webkit-font-smoothing:antialiased;overflow-x:hidden}
 img{max-width:100%;display:block}
 a{color:var(--accText)}
-html[data-lang=en] [data-l=ru],html[data-lang=ru] [data-l=en]{display:none!important}
 .wrap{max-width:1120px;margin:0 auto;padding:0 24px}
 
 /* nav */

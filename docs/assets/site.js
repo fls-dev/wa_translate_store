@@ -3,15 +3,8 @@
   var d=document.documentElement,ls=window.localStorage;
   function get(k){try{return ls.getItem(k)}catch(e){return null}}
   function set(k,v){try{ls.setItem(k,v)}catch(e){}}
-  var q=(location.search.match(/[?&]lang=(en|ru)/)||[])[1];
-  var lang=q||get('wat-lang')||(/^ru|^uk|^be|^kk/i.test(navigator.language||'')?'ru':'en');
-  function setLang(l){d.setAttribute('data-lang',l);d.lang=l;set('wat-lang',l);
-    document.querySelectorAll('[data-setlang]').forEach(function(b){b.classList.toggle('on',b.dataset.setlang===l)});
-    var t=document.documentElement.dataset['title'+l.toUpperCase()];if(t)document.title=t;}
   var theme=get('wat-theme')||(matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light');
   d.setAttribute('data-theme',theme);
-  setLang(lang);
-  document.querySelectorAll('[data-setlang]').forEach(function(b){b.addEventListener('click',function(){setLang(b.dataset.setlang)})});
   var tb=document.getElementById('theme');
   if(tb)tb.addEventListener('click',function(){var n=d.getAttribute('data-theme')==='dark'?'light':'dark';d.setAttribute('data-theme',n);set('wat-theme',n)});
   /* gallery tabs */
