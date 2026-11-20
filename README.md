@@ -12,7 +12,6 @@ Independent Chrome extension (Manifest V3). Translates incoming WhatsApp Web mes
 * `assets/` — icon, screenshots 1280×800, promo tiles.
 * `listing/` — Chrome Web Store text (EN/RU/PL).
 * `privacy/` — policy source + prepared Web Store "Privacy practices" answers.
-* `PUBLISH-GUIDE-RU.md` — publishing checklist (Russian).
 * `build/build_store.py` — builds/validates the zip.
 
 Not affiliated with WhatsApp LLC or Meta Platforms, Inc.
