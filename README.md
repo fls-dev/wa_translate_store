@@ -1,8 +1,18 @@
-# WA Translate — Chrome Web Store package (v3.2.0)
+# WA Translate — AI translator for WhatsApp Web
 
-* `extension/wa-translate-3.2.0.zip` — upload this to the Chrome Web Store (manifest.json at zip root).
-* `assets/` — icon 128×128, screenshots 1280×800 (en/ru captions), small promo 440×280, marquee 1400×560.
-* `listing/` — store text in English, Russian, Polish.
-* `privacy/privacy.html` — privacy policy to host (EN+RU). `privacy/store-privacy-tab-answers.md` — answers for the dashboard's Privacy practices tab.
-* `PUBLISH-GUIDE-RU.md` — step-by-step guide in Russian (start here).
-* `build/build_store.py` — rebuilds/validates the zip from the source folder (only works on the box where the source lives).
+Independent Chrome extension (Manifest V3). Translates incoming WhatsApp Web messages under the original and your replies before sending — with your own AI (Claude, GPT, Gemini, Grok, OpenRouter, DeepL) or free Google Translate, only in chats you choose. No developer server, no analytics.
+
+* Website: https://fls-dev.github.io/wa_translate_store/
+* Privacy policy: https://fls-dev.github.io/wa_translate_store/privacy.html
+* Install manually: download `extension/wa-translate-3.2.0.zip`, unzip, open `chrome://extensions`, enable Developer mode → Load unpacked.
+
+## Repository layout
+* `docs/` — the website (GitHub Pages is served from this folder).
+* `extension/` — store-ready zip (+ SHA256).
+* `assets/` — icon, screenshots 1280×800, promo tiles.
+* `listing/` — Chrome Web Store text (EN/RU/PL).
+* `privacy/` — policy source + prepared Web Store "Privacy practices" answers.
+* `PUBLISH-GUIDE-RU.md` — publishing checklist (Russian).
+* `build/build_store.py` — builds/validates the zip.
+
+Not affiliated with WhatsApp LLC or Meta Platforms, Inc.

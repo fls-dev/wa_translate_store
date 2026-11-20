@@ -61,7 +61,10 @@ All code is bundled in the package. The extension only sends text to translation
 - ☑ I do not use or transfer user data to determine creditworthiness or for lending purposes.
 
 ## Privacy policy URL
-Вставь адрес размещённого `privacy.html` (см. PUBLISH-GUIDE-RU.md, шаг «Политика конфиденциальности»). Перед загрузкой замени в файле `[YOUR-EMAIL@example.com]` на реальную почту.
+```
+https://fls-dev.github.io/wa_translate_store/privacy.html
+```
+(красивая страница с переключателем EN/RU; публикуется из папки `docs/` репозитория fls-dev/wa_translate_store через GitHub Pages)
 
 ## Account tab (не Privacy practices, но нужно)
 - Contact email (подтвердить письмом).

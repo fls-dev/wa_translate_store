@@ -1,80 +1,58 @@
-# Как выложить WA Translate в Chrome Web Store — пошагово
+# Публикация WA Translate в Chrome Web Store — чек-лист
 
-Всё готово в этой папке. Сам ничего не публикуется: ты регистрируешься, загружаешь и нажимаешь «Отправить на проверку».
+Всё готово. Тебе осталось: **зарегистрироваться ($5) → загрузить zip → скопировать тексты → отправить.** Примерно 20–30 минут.
 
-## 0. Что лежит в папке
-| Что | Где |
+**Ссылки (уже работают после включения GitHub Pages):**
+- Сайт: https://fls-dev.github.io/wa_translate_store/
+- Политика конфиденциальности (нужна магазину): `https://fls-dev.github.io/wa_translate_store/privacy.html`
+
+## Шаг 1. Регистрация разработчика (один раз)
+1. Открой https://chrome.google.com/webstore/devconsole и войди в свой Google-аккаунт.
+2. Прими соглашение и оплати **$5** (единоразово, без подписки).
+3. Если попросит — включи двухэтапную аутентификацию в Google-аккаунте.
+4. Вкладка **Account** → введи контактную почту → нажми ссылку подтверждения в письме.
+5. Вопрос «trader / non-trader»: выбери **non-trader** (бесплатное хобби-расширение).
+
+## Шаг 2. Загрузка
+1. В дашборде нажми **Add new item** (Новый элемент).
+2. Выбери файл `extension/wa-translate-3.2.0.zip` из этой папки. Если появится ошибка — пришли мне её текст.
+
+## Шаг 3. Вкладка Store listing (карточка)
+Открывай файл `listing/listing-en.md` и копируй по полям:
+| Поле в магазине | Откуда взять |
 |---|---|
-| Архив для загрузки (версия 3.2.0, manifest в корне) | `extension/wa-translate-3.2.0.zip` |
-| Иконка 128×128 | `assets/icon-128.png` |
-| 5 скриншотов 1280×800 (EN и RU подписи) | `assets/screenshots/en/`, `assets/screenshots/ru/` |
-| Малая рекламная плитка 440×280 | `assets/promo-small-440x280.png` |
-| Marquee 1400×560 (необязательно) | `assets/marquee-1400x560.png` |
-| Тексты карточки EN / RU / PL | `listing/listing-en.md`, `listing-ru.md`, `listing-pl.md` |
-| Политика конфиденциальности (HTML) | `privacy/privacy.html` |
-| Ответы для вкладки Privacy practices | `privacy/store-privacy-tab-answers.md` |
-| Скрипт сборки/проверки zip | `build/build_store.py` |
+| Description (описание) | раздел «Full description» из `listing/listing-en.md` |
+| Category | **Social & Communication** |
+| Language | English (основной); потом «Add language» → Russian (`listing-ru.md`), Polish (`listing-pl.md`) |
+| Icon 128 | `assets/icon-128.png` |
+| Screenshots | 5 файлов из `assets/screenshots/en/` (для русской локали — из `ru/`) |
+| Small promo tile | `assets/promo-small-440x280.png` |
+| Marquee promo | `assets/marquee-1400x560.png` (по желанию) |
+| Homepage URL / Official URL | https://fls-dev.github.io/wa_translate_store/ |
+| Support URL | https://github.com/fls-dev/wa_translate_store/issues |
+Название и краткое описание подтянутся из zip сами.
 
-## 1. Подготовка (10 минут)
-1. Открой `privacy/privacy.html` в любом редакторе и замени `[YOUR-EMAIL@example.com]` (2 места) на свою почту для связи.
-2. Реши, под каким именем публиковаться (имя разработчика видно в карточке).
-3. Включи двухфакторную защиту (2-Step Verification) в Google-аккаунте — без неё публиковать нельзя.
+## Шаг 4. Вкладка Privacy practices
+Открой `privacy/store-privacy-tab-answers.md` и по порядку скопируй:
+1. **Single purpose** — вставить текст.
+2. **Permission justification** — для `storage`, для `web.whatsapp.com` и для списка необязательных API-адресов (там всё готово).
+3. **Remote code** → «No».
+4. **Data usage** — галочки: *Authentication information*, *Personal communications*, *Website content*. Остальные пустые.
+5. Три сертификации — поставить все галочки.
+6. **Privacy policy URL**: `https://fls-dev.github.io/wa_translate_store/privacy.html`
 
-## 2. Регистрация разработчика
-1. Зайди на https://chrome.google.com/webstore/devconsole под своим Google-аккаунтом.
-2. Прими соглашение и оплати **единоразовый взнос $5** (карта). Подписки нет.
-3. Вкладка **Account**: укажи контактную почту и подтверди её по письму. Отметь статус **trader / non-trader** (для бесплатного хобби-проекта без дохода — non-trader; если будешь зарабатывать — trader, тогда придётся показать публичный адрес и телефон).
+## Шаг 5. Вкладка Distribution
+- **Visibility:** сначала **Unlisted** (только по ссылке) → проверь, что ставится и работает → потом переключи на **Public**.
+- Regions: все. Price: Free.
 
-## 3. Где разместить политику конфиденциальности (обязательно, нужна ссылка)
-Самый простой вариант — **GitHub Pages** (бесплатно):
-1. Создай аккаунт на github.com → New repository → название, например, `wa-translate-privacy`, **Public**.
-2. «Add file → Upload files» → загрузи `privacy.html`, переименовав в `index.html` → Commit.
-3. Settings → Pages → Source: «Deploy from a branch», Branch: `main` / `(root)` → Save.
-4. Через 1–2 минуты страница откроется по адресу `https://<твой-логин>.github.io/wa-translate-privacy/`. Это и есть ссылка для магазина (открой и проверь, что страница видна без входа).
-Альтернативы: публичная страница Google Sites или Notion («Share to web»); подойдёт любой постоянный публичный URL.
+## Шаг 6. Отправка
+Нажми **Submit for review**. Проверка обычно от нескольких дней до пары недель; придёт письмо. Когда расширение одобрят — пришли мне ссылку из магазина, я вставлю её в кнопку на сайте (кнопка «Chrome Web Store — скоро» станет рабочей).
 
-## 4. Загрузка расширения
-1. В дашборде: **Add new item** → загрузи `extension/wa-translate-3.2.0.zip`. Если пишет ошибку манифеста — напиши мне текст ошибки.
-2. Откроется карточка (Draft). Дальше заполняем вкладки слева.
+## Как обновлять потом
+Подними `version` в `manifest.json` (3.2.1, 3.3.0…), пересобери zip (попроси меня) → Дашборд → **Package → Upload new package → Submit for review**.
 
-## 5. Вкладка Store listing
-- **Название** берётся из manifest: `WA Translate – AI translator for WhatsApp Web`.
-- **Summary / Description** — из `listing/listing-en.md` (основной язык, например English). Дополнительно добавь переводы: Language → Add → Russian / Polish и вставь `listing-ru.md`, `listing-pl.md`.
-- **Category**: Social & Communication (запасной вариант — Productivity).
-- **Icon**: `assets/icon-128.png`.
-- **Screenshots** (1–5): `assets/screenshots/en/*.png` (для русской локали — из папки `ru`).
-- **Small promo tile**: `assets/promo-small-440x280.png` (с ним расширение показывается выше в выдаче). **Marquee** — по желанию.
-- **Official URL / Homepage / Support URL**: можно оставить пустыми или указать страницу репозитория GitHub.
-
-## 6. Вкладка Privacy practices
-Открой `privacy/store-privacy-tab-answers.md` и скопируй:
-1. Single purpose (одно предложение).
-2. Объяснение для каждого разрешения (storage, web.whatsapp.com, список необязательных API-адресов).
-3. Remote code → **No**.
-4. Data usage: отметь **Authentication information, Personal communications, Website content**; три сертификации — все галочки.
-5. Privacy policy URL — ссылка из шага 3.
-
-## 7. Вкладка Distribution
-- **Visibility**:
-  - **Public** — найдут все через поиск магазина (выбирай, если хочешь, чтобы помогало «кому-то ещё»);
-  - **Unlisted** — работает только по прямой ссылке (хорошо для первого запуска/друзей; можно потом переключить на Public);
-  - Private — только для выбранных email.
-  Рекомендация: сначала Unlisted → проверить, что всё установилось и работает → потом Public.
-- **Regions**: All regions. **Pricing**: Free.
-
-## 8. Отправка на проверку
-Нажми **Submit for review**. Ревью обычно занимает от нескольких дней до пары недель (новые разработчики и расширения проверяют дольше; если больше 3 недель — пиши в поддержку). Статус придёт на почту. Выбери «Publish automatically after approval» или публикацию вручную.
-
-## 9. Как обновлять
-1. Внеси правки, подними `"version"` в manifest.json (3.2.1, 3.3.0 …) — версия всегда должна быть больше предыдущей.
-2. Собери zip заново (`python3 build/build_store.py`) — или попроси меня.
-3. Дашборд → расширение → **Package → Upload new package** → Submit for review. Пользователи получат обновление автоматически через несколько часов после одобрения.
-
-## 10. Риски отказа / жалоб — что проверить
-1. **Торговая марка WhatsApp/Meta.** В названии есть «WhatsApp» (в форме «… for WhatsApp Web») и «WA». Мы добавили дисклеймер «not affiliated», не используем логотип WhatsApp. Мета иногда присылает жалобы на такие названия. Если отклонят/удалят — переименуй в нейтральное, например **«AI Chat Translator for Web Messengers»** / **«WA Translate»** → **«Chat Translate AI»**, и убери слово WhatsApp из названия (в описании упоминание допустимо как «совместимо с»).
-2. **Разрешения.** Постоянный доступ только к web.whatsapp.com; все API-хосты — необязательные (запрашиваются по одному при выборе движка), нет `<all_urls>`, нет `tabs`/`activeTab`. Это снижает риск и ускоряет ревью.
-3. **Удалённый код.** Нет: ни `eval`, ни скриптов с внешних адресов (проверяет скрипт сборки). Не добавляй их при доработках — это главная причина отказов.
-4. **Приватность.** Текст сообщений уходит стороннему провайдеру → ответы на вкладке Privacy practices и политика должны быть честными и совпадать (так и сделано). Не меняй политику без обновления отметок.
-5. **Язык интерфейса — русский.** В английском листинге указано «Interface: Russian». Если хочешь аудиторию шире — стоит добавить английский интерфейс (могу сделать отдельной задачей).
-6. **Правила WhatsApp.** Расширение читает уже отрисованную страницу и отправляет сообщение только после подтверждения пользователя (без массовых рассылок). Тем не менее WhatsApp Web меняется — возможны поломки; для этого есть режим «Диагностика».
-7. **Иконка** — зелёный пузырь с «文A», не копия логотипа WhatsApp; риск низкий. Если придерётся — смени цвет.
+## Что может пойти не так
+1. **Слово WhatsApp в названии.** Meta иногда жалуется. Если отклонят — переименуем, например, в «Chat Translate AI»; скажи мне, всё поправлю.
+2. **Долгая проверка** — это нормально для нового разработчика.
+3. **Разрешения и удалённый код** проблем быть не должно: постоянный доступ только к web.whatsapp.com, удалённого кода нет.
+4. Интерфейс расширения пока только на русском — это честно указано в описании.
