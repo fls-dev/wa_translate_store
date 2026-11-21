@@ -11,9 +11,11 @@
   <img alt="No tracking" src="https://img.shields.io/badge/tracking-none-0e9f7e?style=flat-square">
   <img alt="Bring your own key" src="https://img.shields.io/badge/AI-bring%20your%20own%20key-8a6cff?style=flat-square">
   <a href="https://fls-dev.github.io/wa_translate_store/"><img alt="Website" src="https://img.shields.io/badge/website-fls--dev.github.io-0b1f1a?style=flat-square&logo=githubpages&logoColor=white"></a>
+  <a href="https://chromewebstore.google.com/detail/opebekbphclhiibicbfkhnmmgnibeahh"><img alt="Chrome Web Store" src="https://img.shields.io/badge/Chrome%20Web%20Store-install-4285F4?style=flat-square&logo=googlechrome&logoColor=white"></a>
 </p>
 
 <p align="center">
+  <a href="https://chromewebstore.google.com/detail/opebekbphclhiibicbfkhnmmgnibeahh"><b>Chrome Web Store</b></a> ·
   <a href="https://fls-dev.github.io/wa_translate_store/"><b>Website</b></a> ·
   <a href="https://fls-dev.github.io/wa_translate_store/privacy.html"><b>Privacy policy</b></a> ·
   <a href="https://github.com/fls-dev/wa_translate_store/raw/main/extension/wa-translate-3.2.1.zip"><b>Download ZIP</b></a> ·
@@ -80,9 +82,9 @@ Under the hood: a content script on `web.whatsapp.com` reads the open chat's tex
 
 ## Install
 
-**Chrome Web Store:** coming soon.
+**[Chrome Web Store](https://chromewebstore.google.com/detail/opebekbphclhiibicbfkhnmmgnibeahh)** — recommended for Chrome, Edge, Brave, Opera and other Chromium browsers.
 
-**Manual install (works today)** — Chrome, Edge, Brave, Opera and other Chromium browsers:
+**Manual install** (sideload the ZIP):
 
 1. Download [`wa-translate-3.2.1.zip`](https://github.com/fls-dev/wa_translate_store/raw/main/extension/wa-translate-3.2.1.zip) and unzip it.
 2. Open `chrome://extensions` and turn on **Developer mode**.

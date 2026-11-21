@@ -18,7 +18,7 @@ WA Translate is an independent AI translator for WhatsApp Web. Pick the chats yo
 Translation is off by default. Turn it on for a chat with one click on the translate button in the chat header (or in the extension popup). In every other chat the extension does nothing: no requests, no changes, Enter works as usual. You can also switch to "all chats" mode and exclude individual chats. Each chat can have its own reply language.
 
 ★ BRING YOUR OWN AI
-Use the key you already have: Claude (Anthropic), GPT (OpenAI), Gemini (Google), Grok (xAI), OpenRouter or DeepL. Or use the free Google Translate engine without a key (literal translation). If your AI engine fails, an optional free Google fallback keeps the chat working.
+Use an API key from the AI translation provider you already use — you choose the provider in the settings. Or use the free Google Translate engine without a key (literal translation). If your AI engine fails, an optional free Google fallback keeps the chat working.
 • 25 languages, auto-detected source language.
 • Casual or business style of your replies.
 • Local usage counter with an approximate cost estimate.
