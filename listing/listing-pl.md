@@ -18,7 +18,7 @@ WA Translate to niezależny tłumacz AI dla WhatsApp Web. Wybierz czaty, w któr
 Domyślnie tłumaczenie jest wyłączone. Włączasz je jednym kliknięciem przycisku tłumaczenia w nagłówku czatu (lub w oknie rozszerzenia). W pozostałych czatach rozszerzenie nic nie robi: brak zapytań, brak zmian, Enter działa jak zawsze. Możesz przełączyć się na tryb „wszystkie czaty” i wykluczać wybrane. Każdy czat może mieć własny język odpowiedzi.
 
 ★ WŁASNE AI
-Użyj klucza, który już masz: Claude (Anthropic), GPT (OpenAI), Gemini (Google), Grok (xAI), OpenRouter lub DeepL. Albo darmowego silnika Google Translate bez klucza (tłumaczenie dosłowne). Gdy silnik AI zawiedzie, opcjonalny darmowy zapas Google utrzyma czat w ruchu.
+Użyj klucza API od dostawcy tłumaczenia AI, z którego już korzystasz — dostawcę wybierasz w ustawieniach. Albo darmowego silnika Google Translate bez klucza (tłumaczenie dosłowne). Gdy silnik AI zawiedzie, opcjonalny darmowy zapas Google utrzyma czat w ruchu.
 • 25 języków, automatyczne wykrywanie języka źródłowego.
 • Styl odpowiedzi: swobodny lub formalny.
 • Lokalny licznik użycia z szacunkowym kosztem.

@@ -18,11 +18,11 @@
     lb.addEventListener('click',function(){lb.classList.remove('on')});
     document.addEventListener('keydown',function(e){if(e.key==='Escape')lb.classList.remove('on')});}
   /* Chrome Web Store link: set STORE_URL when the extension is published */
-  var STORE_URL='';
+  var STORE_URL='https://chromewebstore.google.com/detail/opebekbphclhiibicbfkhnmmgnibeahh';
   var cws=document.querySelectorAll('[data-cws]');
   cws.forEach(function(a){
     if(STORE_URL){a.href=STORE_URL;a.target='_blank';a.rel='noopener';a.removeAttribute('aria-disabled');a.classList.remove('soon');}
     else{a.setAttribute('aria-disabled','true');a.addEventListener('click',function(e){e.preventDefault()});}
   });
-  document.querySelectorAll('[data-soon]').forEach(function(n){n.style.display=STORE_URL?'none':''});
+  document.querySelectorAll('[data-soon]').forEach(function(n){if(STORE_URL)n.textContent='Get it on Chrome Web Store';});
 })();
